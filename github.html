@@ -5,96 +5,172 @@
     <title>Git Hub</title>
     <style>
         header{
-            background-color: black;
-            color: #ffffff;
+            background-color: #24292e;
+            color: #fff;
+            height: 50px;
         }
+        img {
+
+            float: left;
+            padding: 10px;
+        }
+
+        td{
+            width: 300px;
+            text-align: center;
+        }
+
+        nav{
+            background-color: #cccccc;
+        }
+
+        a.headerLinks{
+            padding: 15px 30px;
+            color: #fff;
+            text-decoration: none;
+            float: left;
+        }
+
+        a.linkTabs {
+            padding: 10px 30px;
+            color: #666;
+            text-decoration: none;
+            /*
+            float: left;
+             */
+        }
+
+        li.footLinks{
+            text-decoration: none;
+            display: inline;
+
+        }
+
+        li.footLinks > a {
+            text-decoration: none;
+            color: royalblue;
+        }
+
+        .devTeam{
+            height: 70px;
+            border: 1px solid #aaa
+        }
+
+        .devTeamHeading {
+            background-color: #ccc;
+            border: solid #aaa;
+            padding: 5px;
+        }
+
+        .displayBox{
+            padding: 10px;
+            border: solid 1px;
+        }
+
+        .mid{
+            text-align: right;
+        }
+
+        #mockSelected{
+            background-color: white;
+            border-bottom: white;
+            border-top: solid red;
+            color: #000;
+        }
+
+
+
     </style>
 </head>
 <body>
     <header>
-        <img src="img/github-logo-1-300x300.png" alt="Github Logo" style="width:30px; hight:30px;">
-        <ul>
-            <li><a href="">Pull requests</a></li>
-            <li><a href="">Issues</a></li>
-            <li><a href="">Marketplace</a></li>
-            <li><a href="">Explore</a></li>
-        </ul>
+        <img class="headImg" src="img/github-logo-1-300x300.png" alt="Github Logo" height="30" width="30"> <!--style="width:30px; hight:30px;"-->
+        <div>
+            <a class="headerLinks" href="">Pull requests</a>
+            <a class="headerLinks" href="">Issues</a>
+            <a class="headerLinks" href="">Marketplace</a>
+            <a class="headerLinks" href="">Explore</a>
+        </div>
     </header>
     <nav>
-        <img src="img/codeup-arrow.png"  alt="Codeup cheveron" style="width:30px; hight:30px;">
+        <img class="headImg" src="img/codeup-arrow.png"  alt="Codeup cheveron" height="30" width="30"> <!--style="width:30px; hight:30px;" -->
         <h2>Codeup</h2>
-        <ul>
-            <li><a href="">Repositories</a></li>
-            <li><a href="">People</a></li>
-            <li><a href="">Teams</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Settings</a></li>
-        </ul>
+        <div class="linkTabs">
+            <a class="linkTabs" href="">Repositories</a>
+            <a class="linkTabs" id="mockSelected" href="">People</a>
+            <a class="linkTabs" href="">Teams</a>
+            <a class="linkTabs" href="">Projects</a>
+            <a class="linkTabs" href="">Settings</a>
+        </div>
     </nav>
     <main>
-        <h3>Codeup's dev team</h3>
-        <section id="Kent Beck">
-            <img src="img/user-image-1.png" alt="Kent Beck" style="width:48px; hight:48px;">
-            <table>
-                <tr>
-                   <th><a href="">Kent Beck</a> </th>
-                </tr>
-                <tr>
-                    <td>KentBeck</td>
-                    <td>Member</td>
-                    <td>1 team</td>
-                </tr>
-            </table>
-        </section>
+        <article class="displayBox">
+            <div class="devTeamHeading">
+                <h3>Codeup's dev team</h3>
+            </div>
+                <section class="devTeam" id="Kent Beck">
+                    <img src="img/user-image-1.png" alt="Kent Beck" height="48" width="48" ><!--style="width:48px; hight:48px;"-->
+                    <table>
+                        <tr>
+                            <th><a href="">Kent Beck</a> </th>
+                        </tr>
+                        <tr>
+                            <td >KentBeck</td>
+                            <td class="mid">Member</td>
+                            <td>1 team</td>
+                        </tr>
+                    </table>
+            </section>
 
-        <section id="Codeup Instruction Staff">
-            <img src="img/codeup-arrow.png" alt="Codeup Instruction Staff" style="width:48px; hight:48px;">
-            <table>
-                <tr>
-                    <th><a href="">Codeup Instruction Staff</a></th>
-                </tr>
-                <tr>
-                    <td>CodeupInstructors</td>
-                    <td>Member</td>
-                    <td>1 team</td>
-                </tr>
-            </table>
-        </section>
+            <section class="devTeam" id="Codeup Instruction Staff">
+                <img src="img/codeup-arrow.png" alt="Codeup Instruction Staff" height="48" width="48" >
+                <table>
+                    <tr>
+                        <th><a href="">Codeup Instruction Staff</a></th>
+                    </tr>
+                    <tr>
+                        <td>CodeupInstructors</td>
+                        <td class="mid">Member</td>
+                        <td>1 team</td>
+                    </tr>
+                </table>
+            </section>
 
-        <section id="Martin Fowler">
-            <img src="img/user-image-2.png" alt="Martin Fowler" style="width:48px; hight:48px;">
-            <table>
-                <tr>
-                    <th><a href="">Martin Fowler</a></th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Member</td>
-                    <td>0 teams</td>
-                </tr>
-            </table>
-        </section>
+            <section class="devTeam" id="Martin Fowler">
+                <img src="img/user-image-2.png" alt="Martin Fowler" height="48" width="48"> <!-- style="width:48px; hight:48px;"-->
+                <table>
+                    <tr>
+                        <th><a href="">Martin Fowler</a></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="mid">Member</td>
+                        <td>0 teams</td>
+                    </tr>
+                </table>
+            </section>
+        </article>
         <hr>
     </main>
     <footer>
-        <p>
+        <p style="float: left;">
            &copy; 2018 GitHub, Inc.
         </p>
-        <ul>
-            <li><a href="">Terms</a></li>
-            <li><a href="">Privacy</a></li>
-            <li><a href="">Security</a></li>
-            <li><a href="">Status</a></li>
-            <li><a href="">Help</a></li>
+        <ul style="float: left;">
+            <li class="footLinks"><a href="">Terms</a></li>
+            <li class="footLinks"><a href="">Privacy</a></li>
+            <li class="footLinks"><a href="">Security</a></li>
+            <li class="footLinks"><a href="">Status</a></li>
+            <li class="footLinks"><a href="">Help</a></li>
         </ul>
 
-        <ul>
-            <li><a href="">Contact GitHub</a></li>
-            <li><a href="">API</a></li>
-            <li><a href="">Training</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">About</a></li>
+        <ul style="float: right;">
+            <li class="footLinks"><a href="">Contact GitHub</a></li>
+            <li class="footLinks"><a href="">API</a></li>
+            <li class="footLinks"><a href="">Training</a></li>
+            <li class="footLinks"><a href="">Shop</a></li>
+            <li class="footLinks"><a href="">Blog</a></li>
+            <li class="footLinks"><a href="">About</a></li>
         </ul>
 
     </footer>
