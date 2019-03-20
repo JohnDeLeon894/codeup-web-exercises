@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+    <!--
+        Exercises
+    For this exercise, we will be building a registration page for Veridian Dynamics. We will be utilizing Request Inspector to view the resulting data that our form submits. Throughout this exercise, you should be submitting your form and viewing the resulting data on the Request Inspector page.
+
+    xCreate a file named forms.html.
+
+    xUsing what you have learned in the previous lessons, add the necessary HTML document structure to the page with a title of: "Register With Us".
+
+    xCreate an empty form element. We will be adding to this throughout the exercise.
+
+   x Below is an example of using the Request Inspector.
+
+
+    x<form method="POST" action="https://request-inspector.glitch.me/">
+    xCreate text fields for email and password with appropriate placeholder values.
+
+    xCreate a textarea named "bio". This is for the user to fill out a short description of themselves.
+
+    xCreate a "How did you hear about us" section that contains radio buttons. The values should be "billboard", "radio advertisement", "internet advertisement", and "other". Only one of the values should be allowed to be selected at a time.
+
+    What happens if the inputs are given different name attributes?
+    Change these inputs so that multiple answers are allowed to be selected.
+    xCreate a dropdown that asks the user what web browser they are using.
+
+    As you work through the steps above, you should:
+
+    Make sure all of your form elements have labels.
+    Ensure that all of your form values are being submitted to the Request Inspector.
+    Experiment with different attribute values:
+    What do you notice when changing the form's request method from GET to POST?
+    What happens if you leave off the name attribute on an input?
+    What happens if you leave off the id attribute on a form input?
+    Bonus
+    To configure your forms to send you an email, sign up for the free plan on El Formo. El Formo will provide you a URL for your form's action attribute. When you use this action, the El Formo service will email you each form submission. This is a great way to get forms working online super quick!
+    -->
+    <form method="POST" action="https://www.elformo.com/forms/e7406a8c-1327-426a-8c1f-a6760bd923be" autocomplete="off">
+        <h1>Register With Us</h1>
+        <lable for="email">
+            What's your email?
+            <input type="email" name="email" id="email" placeholder="your@email.com" autofocus required>
+        </lable>
+
+        <br>
+
+        <lable for="password">
+            Password
+            <input type="password" name="password"  id="password" placeholder="Password" required min="">
+        </lable>
+
+        <br>
+
+        <lable for="bio">
+            <h3>Please tell us about yourself:</h3>
+            <textarea type="text" name="bio" id="bio" rows="10" cols="50" placeholder="Enter text here."></textarea>
+        </lable>
+
+        <br>
+            <section>
+                <h3>How did you hear about us?</h3>
+                <br>
+                <label for="billboard" selected>
+                    <input type="radio" name="heard_about_from" id="billboard" value="billboard"> Billboard
+                </label>
+                <br>
+                <label for="radio_ad">
+                    <input type="radio" name="heard_about_from" id="radio_ad" value="radio_ad"> Radio Advertisement
+                </label>
+                <br>
+                <label for="internet_ad">
+                    <input type="radio" name="heard_about_from" id="internet_ad" value="internet_ad"> Internet Advertisement
+                </label>
+                <br>
+                <label for="other">
+                    <input type="radio" name="heard_about_from" id="other" value="other"> Other
+                </label>
+
+            </section>
+        <br>
+
+        <div>
+            <h3>Whitch browser do you prefer to use?</h3>
+            <select name="broswer" id="browser">
+                select from the following options:
+                <option value="chrome">Chrome</option>
+                <option value="explorer">Internet Explorer</option>
+                <option value="firefox">Firefox</option>
+                <option value="tor">TOR</option>
+            </select>
+        </div>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
