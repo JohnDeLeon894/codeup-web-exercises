@@ -1,26 +1,32 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Registration</title>
-        <script>
-            function checkPasswordMatch(){
-                var pswrd1 = document.getElementById('password').value;
-                var pswrd2 = document.getElementById('confirm_password').value;
-                if (pswrd1 === pswrd2){
-                    document.getElementById('submit-button').disabled = false;
-
-                }
-                console.log(pswrd1 + ' ' + pswrd2);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <script>
+        function checkPasswordMatch(){
+            var pswrd1 = document.getElementById('password').value;
+            var pswrd2 = document.getElementById('confirm_password').value;
+            if (pswrd1 === pswrd2){
+                document.getElementById('submit-button').disabled = false;
 
             }
-
-        </script>
-    </head>
-    <body>
+            console.log(pswrd1 + ' ' + pswrd2);
+        }
+    </script>
+</head>
+<body>
+<header id="top">
+    <h1>Welcome to Veridian Dynamics!</h1>
+    <p>
+        At Veridian Dynamics, <strong>we</strong> solve <em>your</em> problems with <strong><em>technology</em></strong>.
+    </p>
+    <hr>
+</header>
+<main>
     <form action="https://request-inspector.glitch.me" method="post">
 
 
@@ -53,5 +59,11 @@
             <button type="submit" id="submit-button" disabled>Create New Account!</button>
         </div>
     </form>
-    </body>
+</main>
+<aside>
+    <p>
+        <em>All products come with our quality gaurantee<small><sup>tm</sup></small>.  </em>
+    </p>
+</aside>
+</body>
 </html>
