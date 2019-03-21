@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration</title>
     <script>
+        // check to make sure passwords match
         function checkPasswordMatch(){
             var pswrd1 = document.getElementById('password').value;
             var pswrd2 = document.getElementById('confirm_password').value;
@@ -14,7 +15,8 @@
                 document.getElementById('submit-button').disabled = false;
 
             }
-            console.log(pswrd1 + ' ' + pswrd2);
+            // uncomment for debugging
+            // console.log(pswrd1 + ' ' + pswrd2);
         }
     </script>
 </head>
