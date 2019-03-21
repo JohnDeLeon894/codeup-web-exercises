@@ -1,0 +1,13 @@
+/*style sheet for intro to css*/
+
+/*Heading color */
+h1 {
+    color: crimson;
+}
+
+/*
+removes bullet points from list
+*/
+li{
+    list-style: none;
+}

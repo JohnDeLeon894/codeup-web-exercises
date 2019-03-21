@@ -6,15 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Property Search</title>
-
     <script>
-        var input= document.getElementById('price-range');
-        var output= document.getElementById('price-range-out');
-        output.innerHTML = input.value;
-        input.oninput = function() {
+        function slidePrice(){
+            var input= document.getElementById('price-range').value;
+            var output= document.getElementById('price-range-out').value;
+            output.innerHTML = input.value;
             output.innerHTML = this.value;
+            console.log(input + ' ' + output);
         }
     </script>
+
 </head>
 <!--
 Make a file named property-search.html. This will be a form for a property search.
@@ -64,11 +65,22 @@ etc...
             </label>
         </div>
         <div class="slide_container">
+            <h3>Price Range</h3>
             <label for="price-range">
-                <h3>Price Range</h3>
-                <input type="range" min="40000" max="9999999" class="slider" id="price-range">
-                <p>$<span id="price-range-out"</p>
+
+                <input type="range" min="40000" max="9999999" class="slider" id="price-range" oninput="slidePrice()">
+                <p>$<span id="price-range-out"></span></p>
             </label>
+            <!--
+            <script>
+                var input= document.getElementById('price-range');
+                var output= document.getElementById('price-range-out');
+                output.innerHTML = input.value;
+                input.oninput = function() {
+                    output.innerHTML = this.value;
+                }
+            </script>
+            -->
         </div>
 
     </form>
