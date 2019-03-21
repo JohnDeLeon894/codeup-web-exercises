@@ -2,8 +2,35 @@
 style sheet
 */
 
+/*
+x Center the main heading
+x Add a style to change the color of the headers on your page and make them underlined.
+x Add a style to change the background color of the page.
+Add a style to add a background image to your background. Search how to manipulate the position, sizing of this background image.
+Add a style to change the list-style to something other than the default bullet.
+Add a style to change the font for the entire page. Use google fonts if you would like.
+Add a style to change the table, table cells td and rows tr padding and font sizes.
+Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).
+Continue experimenting with styles to increase the visual appeal of the page.
+*/
+body{
+
+    background-color: #666;
+    background-image: url(https://images.pexels.com/photos/1424108/pexels-photo-1424108.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    background-size: cover;
+    background-position:center;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    color: #24292e;
+    
+}
 
 .fancy-header {
-    color: rebeccapurple; /* single line comment */
+    /* color: #24292e; /* single line comment */
     text-decoration: underline;
+    font-size: 2em;
+    text-align: center;
 }
