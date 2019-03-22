@@ -149,6 +149,19 @@ div:hover {
 
 }
 
+.obscurer{
+
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+
+}
+
+
+
 #top-o-main {
 
     /*background-color: crimson;*/
