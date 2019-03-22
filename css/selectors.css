@@ -20,7 +20,7 @@ em {
 
 /* selector for all elements with class="article" */
 .article {
-    clear:both;#con;
+    clear:both;
 }
 
 /*  selector for all "anchor" elements
