@@ -55,7 +55,7 @@ header {
     width: 100%;
     text-align: center;
     float: left;
-    position: relative;
+    /*position: relative;*/
     top: -10px;
     position: fixed;
     z-index: 1;
@@ -72,7 +72,7 @@ ul, ol {
 
 td, th, table{
     background-color: #24292e;
-    border:  #666 10px groove;
+    border:  #24292e 10px solid;
     /*alignment: center;*/
 
     margin-left: auto;
@@ -84,28 +84,46 @@ td, th, table{
 hr{
 
     clear: both;
+
 }
 
 img{
+
     float: left;
     width: 38%;
     margin: 5%;
     border: #666666 solid 5px;
+
 }
 
-article {
+article, aside{
+
     color: #666;
+    background-color: #24292e;
     text-align: center ;
     clear: both;
     size: 100px;
-    width: 500px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
+    padding: 10px;
+
+}
+footer {
+
+    background-color: #24292e;
+    width: 100%;
+
+}
+
+div:hover {
+
+    opacity: 1;
 
 }
 
 .fancy-header{
-    /* color: #24292e; /* single line comment */
+    /* color: #24292e; */
     text-decoration: wavy underline;
     font-size: 2em;
     text-align: center;
@@ -118,9 +136,16 @@ article {
     width: 29%;
     padding: 1%;
     margin: 1%;
+    opacity: 0.8;
     float: left;
     text-align: center;
     border: ThreeDDarkShadow;
+
+}
+
+.main_section:hover {
+
+    opacity: 1;
 
 }
 
@@ -129,9 +154,11 @@ article {
     /*background-color: crimson;*/
     width: 100%;
     height: 300px;
-    opacity: 0.8;
+
 
 }
+
+
 
 #first_main{
 
