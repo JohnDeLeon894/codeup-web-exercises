@@ -1,0 +1,115 @@
+
+/*
+css for media queries
+breakpoint max 480
+/**********************************
+Default styling for desktop
+***********************************/
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 16px;
+    float:left;
+}
+
+ul {
+    float: right;
+}
+
+li {
+    list-style: none;
+    float: right;
+    margin: 15px;
+    display: inline-block;
+}
+
+.hidden-on-desktop{
+    visibility: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+nav {
+    height:100px;
+    width: 600px;
+}
+
+/**********************************
+styling for mobile
+***********************************/
+
+@media screen and (max-width:480px){
+    body{
+        width: 100%;
+    }
+    div{
+        float: left;
+
+    }
+    .alert-info {
+        
+        width:100%;
+        text-align: center;
+        /*position: absolute;*/
+        float: left;
+        padding:16px;
+        background-color: #d4fbfc;
+        border: 1px solid #cedbdb;
+        visibility: visible;
+    }
+
+    .alert-info>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    h1 {
+        text-align: center;
+
+    }
+
+    ul {
+        display: inline-block;
+        list-style: none;
+        width: 100%;
+        padding:0;
+        position: absolute;
+        right: -7px;
+        top: 163px;
+        background-color: #3B94D9;
+
+    }
+
+    li {
+        background-color: #cccccc;
+        width: calc(100% - 10px);
+        /*float: left;*/
+        clear: both;
+        text-align: center;
+        padding:16px;
+        margin: 6px;
+
+
+    }
+
+    img {
+
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .main{
+        /*position: absolute;*/
+        top: 600px;
+    }
+
+}
