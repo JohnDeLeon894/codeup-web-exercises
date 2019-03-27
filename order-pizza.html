@@ -21,47 +21,156 @@ js code
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <!-- html start -->
-    <nav class="navbar fixed-top">
-        <!--<section class="navbar-brand">-->
-            <!--<a class="nav-link" href="">Pizzaworld</a>-->
-        <!--</section>-->
-        <!--<section class="nav-item">-->
-            <!--<a class="nav-link" href="">Order online</a>-->
-        <!--</section>-->
-        <!--<section class="nav-item">-->
-            <!--<a class="nav-link" href="">Menu</a>-->
-        <!--</section>-->
-        <!--<form action="" class="form-inline">-->
-            <!--<input type="search" class="form-control" placeholder="Zip code">-->
-            <!--<button class="btn" type="submit">Search stores near you!</button>-->
-        <!--</form>-->
-
-        <ul class="nav">
-            <li class="nav-item mx-auto p-3">
-                <a href="" class="nave-link">Pizzaworld</a>
+    <nav class="navbar fixed-top bg-light text-muted mw-100 p-0 fixed">
+        <ul class="nav h-100">
+            <a href="" class="nave-link text-black-50 align-middle nav-hover px-3 p-1">
+            <li class="nav-item text-center  align-middle">
+                Pizzaworld
             </li>
-            <li class="nav-item mx-auto p-3">
-                <a href="" class="nave-link">Order online</a>
-            </li>
-            <li class="nav-item mx-auto p-3">
-                <a href="" class="nave-link">Menu</a>
-            </li>
-            <li class="nav-item mx-auto p-3">
+            </a>
+            <a href="" class="nav-item px-3 p-1 text-center nav-hover" >
+                <li class="nave-link text-black-50 align-middle">
+                   Order online
+                </li>
+            </a>
+            <a href="" class="nav-item px-3 p-1 text-center nav-hover">
+                <li class="nave-link text-black-50 align-middle">
+                    Menu
+                </li>
+            </a>
+            <li class="nav-item px-3 p-1  text-center">
                 <form action="" class="form-inline">
                 <input type="search" class="form-control" placeholder="Zip code">
-                <button class="btn border mx-1" type="submit">Search stores near you!</button>
+                <button class="btn border mx-1 text-black-50 bg-white" type="submit">Search stores near you!</button>
                 </form>
             </li>
-            <li class="nav-item mx-auto p-3 d-flex justify-content-end">
-                <a href="" class="nav-link">
-                    <i class="fas fa-user">  signup</i>
-                </a>
-            </li>
-
-
         </ul>
+        <a href="" class="nav-link text-black-50 nav-hover">
+            <section class="nav-item mx-3 p-1 d-flex justify-content-end text-center">
+
+                    <i class="fas fa-user">  signup</i>
+            </section>
+        </a>
     </nav>
 
+    <!-- main content-->
+
+    <main class="container">
+
+        <div class="jumbotron jumbotron-fluid jumb-pizza">
+
+            <div class="pizza-heading">
+                <h1 class="display-4 text-center">Welcome to Pizza World!</h1>
+            </div>
+        </div>
+        <section>
+            <h2>Build your own pizza!</h2>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"> <span class="badge badge-pill badge-secondary">1</span> Size and Crust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">2</span> Chease and Sauce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">3</span> Toppings</a>
+                </li>
+            </ul>
+            <!-- cards -->
+
+            <div class="card">
+                <div class="card-header text-white bg-primary">
+                    Choose size and crust
+                </div>
+                <div class="card-body">
+                    <!--<h5 class="card-title">Hand Tossed</h5>-->
+                    <div class="card w-100" style="width: 18rem;">
+                        <div class="card-header">
+                            Hand Tossed
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Garlic seasoned crust with a rich,buttery taste.</li>
+                            <li class="list-group-item">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1">Small (10")</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1">Medium (12")</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card w-100" style="width: 18rem;">
+                        <div class="card-header">
+                            Crispy Thin
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Think enough for optimum thin to crunchy ratio</li>
+                            <li class="list-group-item">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1">Medium (12")</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1">Large (14")</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer text-muted d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary">Next Step ></button>
+                </div>
+            </div>
+
+            <!--
+            second card
+            -->
+            <div class="card">
+                <div class="card-header text-white bg-primary">
+                    Choose size and crust
+                </div>
+                <div class="card-body">
+                    <!--<h5 class="card-title">Hand Tossed</h5>-->
+                    <div class="card w-100" style="width: 18rem;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-body">
+                                    Cheese
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">How much?</p>
+                                <select class="custom-select">
+                                    <option value="1">Light</option>
+                                    <option selected value="2">Normal</option>
+                                    <option value="3">Extra</option>
+                                    <option value="4">Double</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card w-100" style="width: 18rem;">
+
+                    </div>
+                </div>
+                <div class="card-footer text-muted d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary">Next Step ></button>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
 
 
 </body>

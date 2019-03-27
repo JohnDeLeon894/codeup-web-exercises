@@ -1,0 +1,14 @@
+.nav-hover:hover{
+    background-color: #E6ECF0;
+    text-decoration: none;
+}
+
+.jumb-pizza{
+    background-image: url("../img/jumbotron-pizza.png");
+}
+
+.pizza-heading {
+    background-color: white;
+    font-size: 1rem;
+    opacity: 0.7;
+}
