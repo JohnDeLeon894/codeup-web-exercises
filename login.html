@@ -1,67 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Account Login</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-<!--
-Make a file named login.html.
+<main>
 
-Add the following inputs:
+    <form action="#">
 
-username, make it required, ensure the cursor is inside this input on page load
-.email., make it required
-password, make it required
-a checkbox that says "Keep me logged in for 2 weeks" and load the page with the checkbox checked
-a button that submits the form with the text of "Login"
--->
-<header id="top">
-    <h1>Welcome to Veridian Dynamics!</h1>
-    <p>
-        At Veridian Dynamics, <strong>we</strong> solve <em>your</em> problems with <strong><em>technology</em></strong>.
-    </p>
-    <hr>
-</header>
+        <fieldset class="width-80">
 
-<form action="https://request-inspector.glitch.m">
-    <div>
-        <h2>Log In to My Account</h2>
-        <label for="username">
-           <p>Username</p>
-            <input type="text" id="username" name="username"  autofocus required>
-        </label>
-    </div>
-    <div>
-        <label for="email">
-            <p>Email Address</p>
-            <input type="email" name="email" id="email" required>
-        </label>
-    </div>
-    <div>
-        <label for="password">
-            <p>Password</p>
-            <input type="text" name="password" id="password" required>
-        </label>
-    </div>
-    <div>
-        <label for="keep_logged_in">
-            <input type="checkbox" id="keep_logged_in" name="keep_logged_in" checked> Keep me logged in for 2 weeks
-        </label>
-    </div>
-    <div>
-        <button type="submit">Login</button>
-    </div>
-</form>
+            <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" name="username" class="form-control">
+            </div>
 
-<aside>
-    <p>
-        <em>All products come with our quality gaurantee<small><sup>tm</sup></small>.  </em>
-    </p>
-</aside>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
 
+            <button class="btn btn-block">Login</button>
+
+        </fieldset>
+
+    </form>
+
+</main>
 </body>
 </html>
