@@ -92,14 +92,14 @@ js code
                             <li class="list-group-item">Garlic seasoned crust with a rich,buttery taste.</li>
                             <li class="list-group-item">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Small (10")</label>
+                                    <input type="radio" id="sml-handtoss" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="sml-handtoss">Small (10")</label>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Medium (12")</label>
+                                    <input type="radio" id="med-handtoss" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="med-handtoss">Medium (12")</label>
                                 </div>
                             </li>
                         </ul>
@@ -112,14 +112,14 @@ js code
                             <li class="list-group-item">Think enough for optimum thin to crunchy ratio</li>
                             <li class="list-group-item">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Medium (12")</label>
+                                    <input type="radio" id="med-thin" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="med-thin">Medium (12")</label>
                                 </div>
                             </li>
                             <li class="list-group-item">
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Large (14")</label>
+                                    <input type="radio" id="lg-thin" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="lg-thin">Large (14")</label>
                                 </div>
                             </li>
                         </ul>
@@ -142,30 +142,150 @@ js code
                     <div class="card w-100" style="width: 18rem;">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="card-body">
+
                                     Cheese
-                                </h5>
+
                             </div>
                             <div class="card-body">
                                 <p class="card-text">How much?</p>
                                 <select class="custom-select">
-                                    <option value="1">Light</option>
-                                    <option selected value="2">Normal</option>
-                                    <option value="3">Extra</option>
-                                    <option value="4">Double</option>
+                                    <option value="light">Light</option>
+                                    <option selected value="normal">Normal</option>
+                                    <option value="extra">Extra</option>
+                                    <option value="double">Double</option>
                                 </select>
 
                             </div>
                         </div>
+
+
                     </div>
                     <div class="card w-100" style="width: 18rem;">
 
+                        <div class="card">
+                            <div class="card-header">
+
+                                    Sauce
+
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">What Type?</p>
+                                <select class="custom-select">
+                                    <option value="tom">Tomato sauce</option>
+                                    <option selected value="mar">Marinara sauce</option>
+                                    <option value="bbq">BBQ Sauce</option>
+                                    <option value="alf">Alfredo Sauce</option>
+                                </select>
+                                <p class="card-text">How much?</p>
+                                <select class="custom-select">
+                                    <option value="light">Light</option>
+                                    <option selected value="norm">Normal</option>
+                                    <option value="ext">Extra</option>
+                                </select>
+                            </div>
                     </div>
                 </div>
                 <div class="card-footer text-muted d-flex justify-content-end">
-                    <button type="button" class="btn btn-primary">Next Step ></button>
+                    <!-- navigation buttons -->
+                    <!--<button type="button" class="btn btn-primary">< Previous Step </button>-->
+                    <!--<button type="button" class="btn btn-primary">Next Step ></button>-->
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">< Previous Step</button>
+                        <button type="button" class="btn btn-primary">Next Step ></button>
+                    </div>
                 </div>
             </div>
+
+                <!-- last panel for ordering pizza -->
+
+                <div class="card">
+                    <div class="card-header text-white bg-primary">
+                        Choose Toppings
+                    </div>
+                    <div class="card-body">
+                        <div class="card">
+                            <div class="card-header">
+                                Choose meats
+                            </div>
+                            <div class="card-body">
+
+                                <ul class="list-group list-group-flush">
+
+                                    <li class="list-group-item">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="beef">
+                                            <label class="custom-control-label" for="beef">Beef</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ham">
+                                            <label class="custom-control-label" for="ham">Ham</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="phil">
+                                            <label class="custom-control-label" for="phil">Philly Steak</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="bcn">
+                                            <label class="custom-control-label" for="bcn">Bacon</label>
+                                        </div>
+                                    </li>
+                            </ul>
+
+                            </div>
+                        </div>
+
+                        <!----------------------------------->
+
+                        <div class="card">
+                            <div class="card-header">
+
+                                None Meat Selection
+
+                            </div>
+                            <div class="card-body">
+
+                                <ul class="list-group list-group-flush">
+
+                                    <li class="list-group-item">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="gpep">
+                                            <label class="custom-control-label" for="gpep">Green Peppers</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="mshrm">
+                                            <label class="custom-control-label" for="mshrm">Mushrooms</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="oni">
+                                            <label class="custom-control-label" for="oni">Onions</label>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="jal">
+                                            <label class="custom-control-label" for="jal">Jalape&ntilde;o </label>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-footer text-muted d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary">Checkout <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
 
         </section>
 
