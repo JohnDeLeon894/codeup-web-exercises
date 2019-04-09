@@ -1,3 +1,4 @@
+/*
 // external JS file for External_js.html
 
 "use strict";
@@ -96,8 +97,8 @@ alert (totesPay);
 
 // console.log(income(10, 4, 6)); code from previous exercise
 
-/* A student can be enrolled to a class only if the class is not full and the class schedule does not conflict with her current schedule.
-*/
+/!* A student can be enrolled to a class only if the class is not full and the class schedule does not conflict with her current schedule.
+*!/
 
 function canEnroll(nStudents, available) {
 
@@ -128,12 +129,12 @@ var available = canEnroll(nStudents, bConflict);
 alert(available);
 
 
-/*
+/!*
 var testArray=[ 12, 24, -9, 0];
 
 for(i=0; i < 4; i++ ) {
 
-    // console.log(canEnroll(testArray[i])); resolution for previous lesson.*/
+    // console.log(canEnroll(testArray[i])); resolution for previous lesson.*!/
 
 //}
 //    A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
@@ -159,7 +160,7 @@ var nItems = prompt('How many items did you purchase?');
     var oOffer= offerValid(nItems, expired, premium);
     alert(oOffer);
 
-/*
+/!*
 Solution to previous assignment.
 var testArray=[ 12, 24, -9, 0];
 
@@ -168,4 +169,14 @@ for(var i=0; i < 4; i++ ) {
     console.log(offerValid(testArray[i]));
 
 }
+*!/
+* Fizz Buzz: log all numbers from 1 - 100
+–    if divisible by 3 log “Fizz"
+–    if divisible by 5 log “Buzz"
+–    if divisible by 3 and 5 log “FizzBuzz”
+–    else, log the current number
 */
+(function () {
+
+
+})();
