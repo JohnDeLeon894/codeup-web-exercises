@@ -1,5 +1,14 @@
 (function () {
 
+    function wait(ms)
+    {
+        var d = new Date();
+        var d2 = null;
+        do { d2 = new Date(); }
+        while(d2-d < ms);
+    }
+
+
     /*
     Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
 
@@ -97,6 +106,7 @@ for (var i =1; i <10; i++){
 
 for (var i = 100; i >=5 ; i=i - 5){
     console.log(i);
+    wait(2000)
 }
 
 
