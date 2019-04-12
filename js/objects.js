@@ -52,20 +52,26 @@
          {name: 'George', amount: 320}
      ];
 
-     function hEB_DiscountCalc(name, amount){
-         var hEB_postdiscount= amount;
+     function hEB_DiscountCalc(item){
+
+         // console.log("function called");
+         var amount = item.amount;
+         var hEB_postdiscount= amount.toFixed(2);
          var hEB_Discount = 0;
 
          if(amount>199){
              hEB_Discount = 0.12
-             hEB_postdiscount= amount -(amount* hEB_Discount);
+             hEB_postdiscount= (amount -(amount* hEB_Discount)).toFixed(2);
 
          }
-         var reply = "Purchase cost: " + amount + "\n" + "Applied discount: " + hEB_Discount+ "\n" + "Total: " + hEB_postdiscount;
+         var reply = "Purchase cost: $" + amount + "\n" + "Applied discount: " + (hEB_Discount*100) + "%\n" + "Total: $" + hEB_postdiscount;
+         console.log(reply);
          return reply;
      }
 
-    /** TODO:
+     shoppers.forEach(hEB_DiscountCalc);
+
+/** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
      * property. The author property should be an object with properties
@@ -77,6 +83,54 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [];
+// var books= [
+//         {
+//             "title": "The Sun Also Rises",
+//             "author": {
+//                 "firstName": "Ernest",
+//                 "lastName": "Hemmingway"
+//             }
+//
+//         },
+//     //******next object
+//         {
+//            "title": " The Hunt For The Red Octover",
+//            "author": {
+//                "firstName": "Tom",
+//                 "lastName": "Clancy"
+//             }
+//
+//         },
+//     //******next object
+//         {
+//            "title": "The Agony and the Ecstasy ",
+//            "author": {
+//                "firstName": "Irving",
+//                 "lastName": "Stone"
+//             }
+//
+//         },
+//     //******next object
+//         {
+//             "title": "The 12th Planet",
+//             "author": {
+//                 "firstName": "Zacharia",
+//                 "lastName": "Sitchin"
+//             }
+//
+//         },
+//     //******next object
+//         {
+//            "title": "Unholy Mourning",
+//            "author": {
+//                "firstName": "David",
+//                 "lastName": "Lippincott"
+//             }
+//
+//         }
+//     ];
 
     /**
      * TODO:
@@ -103,6 +157,13 @@
      *      ...
      */
 
+    books.forEach(function (book, ind) {
+        var title = book.title;
+        var auth = book.author.firstName + " " + book.author.lastName;
+        console.log("Book # " + ind + "\n Title: " + title + "\n Author: " + auth + "\n __________________");
+        //return "Book # " + ind + "\n Title: " + title + "\n Author: " + auth + "\n __________________";
+    });
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -114,4 +175,52 @@
      *   `showBookInfo` function.
      */
 
+    /*
+    Book # 0
+ Title: The Sun Also Rises
+ Author: Ernest Hemmingway
+ __________________
+Book # 1
+ Title:  The Hunt For The Red Octover
+ Author: Tom Clancy
+ __________________
+Book # 2
+ Title: The Agony and the Ecstasy
+ Author: Irving Stone
+ __________________
+Book # 3
+ Title: The 12th Planet
+ Author: Zacharia Sitchin
+ __________________
+Book # 4
+ Title: Unholy Mourning
+ Author: David Lippincott
+ __________________
+ */
+
+    function createBook(title, auth) {
+        var authArr = auth.split(" ");
+        //var books = [];
+        var book = {};
+        book.title= title;
+        book.author ={};
+        book.author.firstName = authArr[0];
+        book.author.lastName = authArr[1];
+        books.push(book);
+        console.log(books);
+    }
+
+    createBook("The Sun Also Rises", "Ernest Hemmingway");
+    createBook("The Hunt for Red October", "Tom Clancy");
+    createBook("The Agony and the Ecstasy", "Irving Stone");
+    createBook("The 12th Planet", "Zacharia Sitcin" );
+    createBook("Unholy Mourning", "David Lippincott");
+
+    function showBookInfo(book, ind) {
+        if (ind === undefined){ind = "";} else { ind = "Book # " + ind}
+        var title = book.title;
+        var auth = book.author.firstName + " " + book.author.lastName;
+        console.log( ind + "\n Title: " + title + "\n Author: " + auth + "\n __________________");
+    }
+    books.forEach(showBookInfo);
 //})();
