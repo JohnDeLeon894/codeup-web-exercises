@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapbox API</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 70%;
+            height: 80vh;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1>Map Application Project</h1>
+
+<div id='map'></div>
+
+<!--
+Generate a Mapbox API Key using the steps from above
+Create a new file named mapbox_maps_api.html and add a map using the next steps.
+Generate a map that shows the city with your favorite restaurant using geocoding.
+Redraw the map of the above location at zoom levels 5, 15, and 20. Do this by simply changing the value of zoom level where the map properties are initially set and refresh the page to see the changes. Can the zoom be changed programmatically after the initial map is drawn?
+Create a marker on your map of the exact location of your favorite restaurant set the zoom to allow for best viewing distance.
+Create a popup with the name of the restaurant.
+Make sure the info window does not display until the marker has been clicked on.
+Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.
+-->
+
+
+<script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v10",
+        center: [10, 10],
+        zoom: 10
+    });
+
+    var objArr = [
+        {
+            name: "Fujiya",
+            address: "9030 Wurzbach Rd, San Antonio, TX 78240",
+            about: "Japanese Steakhouse"
+        },
+        {
+            name: "Taqueria Jalisco",
+            address: "151 Moursund Blvd, San Antonio, TX 78221",
+            about: "Mexican Restaraunt"
+        },
+        {
+            name: "Pizza Italia",
+            address: "3023 Thousand Oaks #101, San Antonio, TX 78247",
+            about: "Italian eatery and bar"
+        }
+    ];
+
+    function geoChanger(name, address, zoom, about) {
+        if (zoom === null || isNaN(zoom)) {
+            zoom = map.getZoom();
+        }
+        return geocode(address, mapboxKey).then(function (result) {
+            mapChange(result, zoom, name, about);
+            //console.log(result);
+
+        });
+    }
+
+    function mapChange(coords, zoom, name, about) {
+        //map.setStyle("mapbox://styles/johnd894/cjujx7a7p0zka1ftisf77fsey");
+
+        if (zoom === null || isNaN(zoom)) {
+            zoom = map.getZoom();
+        }
+        map.setZoom(zoom);
+        map.setCenter(coords);
+        console.log("changed?8***********");
+
+        var locPopup = new mapboxgl.Popup()
+            .setHTML(about);
+
+
+        var marker = new mapboxgl.Marker()
+            .setLngLat(coords)
+            .addTo(map)
+            .setPopup(locPopup);
+
+    }
+
+    function mapProcess(item, inx, arr) {
+        var name = item.name;
+        var address = item.address;
+        var about = item.about;
+
+        geoChanger(name, address, 17, about);
+
+
+    }
+
+    objArr.forEach(mapProcess);
+
+
+    //geoChanger("9030 Wurzbach Rd, San Antonio, TX 78240", 17);
+
+
+</script>
+</body>
+</html>

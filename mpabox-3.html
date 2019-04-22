@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        #map {
+            /* the width and height may be set to any size */
+            width: 70%;
+            height: 80vh;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<!--
+Create an HTML file called mapbox-3.html and copy your code over from mapbox-2. Add a popup to the Lincoln Memorial
+marker that contains the text "Lincoln Memorial"
+-->
+
+<h1>Map Application Project</h1>
+
+<div id='map'></div>
+
+
+
+<script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+
+
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/johnd894/cjujwuhgt0mkl1frznmyck2gp',
+        center: [-98.4916, 29.34],
+        zoom: 13
+    });
+
+    function mapChange() {
+        map.setStyle("mapbox://styles/johnd894/cjujx7a7p0zka1ftisf77fsey");
+        map.setZoom (3);
+        map.setCenter [98, 27]
+        console.log("changed?8***********")
+    }
+
+    //setTimeout(mapChange, 5000);
+    geocode("paris texas",mapboxKey).then(function (result) {
+        console.log(result);
+        map.setCenter(result);
+
+        var marker = new mapboxgl.Marker() ;
+            marker.setLngLat([result]);
+            marker.addTo(map);
+    });
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

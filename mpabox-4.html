@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        #map {
+            /* the width and height may be set to any size */
+            width: 70%;
+            height: 80vh;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<!--
+Create an HTML file called mapbox-4.html centered on San Antonio that programmatically is re-centered over Zion National
+ Park using the coordinates of the park by geocoding the physical address.
+
+ Add the latitude and longitude of Honolulu, Hawaii and use reverse geocoding to move the map to this location by
+ geocoding inside of the reverseGeocode function.
+-->
+
+<h1>Map Application Project</h1>
+
+<div id='map'></div>
+
+
+
+<script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+
+
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v10',
+        center: [-98.4916, 29.34],
+        zoom: 10
+    });
+
+    function mapChange(coords) {
+        //map.setStyle("mapbox://styles/johnd894/cjujx7a7p0zka1ftisf77fsey");
+        //map.setZoom (3);
+        map.setCenter(coords);
+        console.log("changed?8***********")
+    }
+
+    var hono = "Hololulu";
+    var zion = "zion national park";
+
+    function geoChanger() {
+        geocode(zion, mapboxKey).then(function (result) {
+            mapChange(result);
+            console.log(result);
+        });
+    }
+
+    setTimeout(geoChanger, 5000);
+
+
+    reverseGeocode({lng: -157.8557, lat:21.3045}, mapboxKey).then(function (value) {
+        console.log(value);
+        map.setZoom(12);
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
+

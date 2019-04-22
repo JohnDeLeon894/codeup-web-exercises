@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+
+        body {
+            background-color: white;
+        }
+
+        #map {
+            /* the width and height may be set to any size */
+            width: 70%;
+            height: 80vh;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #666;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Map Application Project</h1>
+
+<div id='map'></div>
+
+
+<!--Create an HTML file called mapbox-2.html
+
+ In this file, create a Mapbox map that shows Washington D.C. and places a marker on the Lincoln Memorial.
+
+ -->
+
+<script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script>
+    var longLant = geocode("lincoln memorial", mapboxKey);
+
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/johnd894/cjujwuhgt0mkl1frznmyck2gp',
+        center: [38.8896109,-77.0519999],
+        zoom: 13
+    });
+
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat(longLant)
+        .addTo(map);
+</script>
+
+
+</body>
+</html>
