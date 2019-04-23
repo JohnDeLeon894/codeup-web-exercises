@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery.js"></script>
+
+
+<script>
+	"use strict";
+    var arr1 = [38,38,40,40,37,39,37,39,66,65];
+    var arr2 = [];
+	$(document).keyup(function(event){
+		let cheat = false;
+		console.log(event.keyCode);
+		arr2.push(event.keyCode);
+		if(arr2.length > 10){
+			arr2.shift();
+        }
+		for (var i = 0; i < arr1.length; i++) {
+            if(arr1[i]!==arr2[i]){
+	            console.log("incorrect sequence");
+	            return;
+
+            }
+            cheat = true;
+		}
+		if(cheat && arr2.length===10){
+			//alert("cheater!");
+			window.open("https://www.youtube.com/watch?v=jTIgxX_GjQQ", "_self");
+        }
+	});
+</script>
+</body>
+</html>

@@ -19,6 +19,11 @@ function wait(ms)
 }
 
 
+	$(".colors").css({
+		"background-color": randomColor
+	});
+
+
 function h1ColorFlipper(onOff){
 	let color = randomColor();
 	//console.log(color);
@@ -51,22 +56,33 @@ $('h1').click(function () {
 
 $('p').dblclick(function () {
 	let color = randomColor();
-	$("p").css("background-color" , color);
+	$("p").css({
+		"background-color ": color,
+		"font-size": "18px"
+	});
 });
 
 $("li").hover(function () {
 	$(this).css("background-color", randomColor())
 },
 	function () {
-	$(this).css("background-color", "white");
+	$(this).css("background-color", "black");
 } );
 
 
 $("*").hover(function () {
-		$(this).css("background-color", randomColor())
+		$(this).css("background-color", randomColor());
+		$(this).addClass("colors");
+		$(".colors").css({
+			"background-color": randomColor
+		});
 	},
 	function () {
-		$(this).css("background-color", "white");
+		$(this).css("background-color", "black");
+		$(this).removeClass("colors");
+		$(".colors").css({
+			"background-color": randomColor
+		});
 	} );
 
 //});
