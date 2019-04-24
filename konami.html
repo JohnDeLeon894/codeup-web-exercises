@@ -3,8 +3,15 @@
 <head>
     <title>Konami Code</title>
 </head>
-<body>
-<h1>Konami Code</h1>
+<body style="background-color: black">
+<h1 style="color: #666; text-align: center">Konami Code</h1>
+
+<div class="container" style="align-content: center">
+    <div style="padding: 0 20%">
+    <img src="img/contra-commodore-64-front-cover.jpg" alt="Contra Commodore 64 front cover">
+    </div>
+</div>
+
 
 <script src="js/jquery.js"></script>
 
@@ -17,14 +24,14 @@
     var arr2 = [];
 	$(document).keyup(function(event){
 		let cheat = false;
-		console.log(event.key);
+		//console.log(event.key);
 		arr2.push(event.key);
 		if(arr2.length > 10){
 			arr2.shift();
         }
 		for (var i = 0; i < arr1.length; i++) {
             if(arr1[i]!==arr2[i]){
-	            console.log("incorrect sequence");
+	            //console.log("incorrect sequence");
 	            return;
 
             }
@@ -32,8 +39,8 @@
 		}
 		if(cheat && arr2.length===10){
 			//alert("cheater!");
-			//window.open("https://www.youtube.com/watch?v=jTIgxX_GjQQ", "_self");
-            window.open("https://www.youtube.com/watch?v=cwhLueAWItA&t=6855s", "_self");
+			window.open("https://www.youtube.com/watch?v=jTIgxX_GjQQ", "_self");
+            //window.open("https://www.youtube.com/watch?v=cwhLueAWItA&t=6855s", "_self");
         }
 	});
 </script>
