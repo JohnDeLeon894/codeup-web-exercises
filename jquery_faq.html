@@ -7,8 +7,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery FAQ</title>
     <style>
-        .invisible{
+        image {
+            object-fit: contain
+        }
+
+        .invisible {
             visibility: hidden;
+        }
+
+        .images {
+
+            -moz-box-shadow: 2px 2px 5px #999;
+            -webkit-box-shadow: 2px 2px 5px #999;
+            box-shadow: 1px 2px 5px #333;
+            float: left;
+            padding: 0;
+            border: solid 3px #EFEFEF;
+            height: 200px;
+            width: 200px;
+        }
+
+        .images-container {
+            padding: 50px;
+            margin: 50px;
+            float: left;
+            border: ridge 15px;
+            background-color: #ddd;
+        }
+
+        #photo-1 {
+            background-image: url("img/vision-1.jpeg");
+            background-size: cover;
+        }
+
+        #photo-2 {
+            background-image: url("img/vision-2.jpeg");
+            background-size: cover;
+        }
+
+        #photo-3 {
+            background-image: url("img/vision-3.jpeg");
+            background-size: cover;
         }
     </style>
 
@@ -16,30 +55,39 @@
 <body>
 
 <dl>
-    <dt> <h1>Natinal Parks FAQ</h1> <br><button type="button" id="hide">Hide me not! </button> </dt>
-    <dd class="invisible">  <h1>
+    <dt><h1>Natinal Parks FAQ</h1> <br>
+        <button type="button" id="hide">Hide me not!</button>
+    </dt>
+    <dd class="invisible"><h1>
         Who is the director of the National Park Service?
     </h1>
-        Dan Smith is the deputy director exercising the authority of director for the National Park Service.
+        Dan Smith is the deputy director exercising the authority of director for the National
+        Park Service.
         Learn more about past directors of the National Park Service.
         April 24, 2015
     </dd>
     <dd class="invisible">
         <h1>What government agency oversees the National Park Service?</h1>
-        The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is
+        The National Park Service is a bureau of the Department of the Interior. Directly
+        overseeing its operation is
         the department's Assistant Secretary for Fish, Wildlife and Parks.
     </dd>
     <dd class="invisible">
         <h1>How old is the National Park System?</h1>
-        The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.
-        Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as
+        The National Park Service was created by an act signed by President Woodrow Wilson on
+        August 25, 1916.
+        Yellowstone National Park was established by an act signed by President Ulysses S. Grant
+        on March 1, 1872, as
         the nation's first national park.
     </dd>
     <dd class="invisible">
-       <h1>How many areas are in the National Park System?</h1>
-        The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia,
-        American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national parks, monuments,
-        battlefields, military parks, historical parks, historic sites, lakeshores, seashores, recreation areas, scenic
+        <h1>How many areas are in the National Park System?</h1>
+        The system includes 419 areas covering more than 85 million acres in every state, the
+        District of Columbia,
+        American Samoa, Guam, Puerto Rico, and the Virgin Islands. These areas include national
+        parks, monuments,
+        battlefields, military parks, historical parks, historic sites, lakeshores, seashores,
+        recreation areas, scenic
         rivers and trails, and the White House.
     </dd>
     <dd class="invisible">
@@ -48,7 +96,8 @@
     </dd>
     <dd class="invisible">
         <h1>Can I bring my pet to a national park?</h1>
-        Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities.
+        Some national parks welcome pets—in developed areas, on many trails and campgrounds,and
+        in some lodging facilities.
     </dd>
     <dd class="invisible">
         <h1>How many people visit the national parks?</h1>
@@ -68,22 +117,119 @@
     </dd>
     <dd class="invisible">
         <h1>How do I reserve a tour in a park?</h1>
-        You can book some park tours through Recreation.gov such as WWII Valor in the Pacific (Pearl Harbor), many
-        Mammoth Cave National Park cave tours, Independence National Historical Park tours, and more. Not all parks
+        You can book some park tours through Recreation.gov such as WWII Valor in the Pacific
+        (Pearl Harbor), many
+        Mammoth Cave National Park cave tours, Independence National Historical Park tours, and
+        more. Not all parks
         participate in this reservation service.
     </dd>
 </dl>
+<button type="button" id="facts"> highlight the facts1</button>
+<ul>
+    <li>
+        <h3>Yosemity</h3>
+        <ul>
+            <li>Codeup had a class named after this park</li>
+            <li>This is not the part that Yoggy bear is from</li>
+            <li>Yosemite might be our nation’s 3rd national park, but it sparked the idea of
+                national parks.
+            </li>
+            <li>Yosemite’s granite rock formations glow like fire at sunset.</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Yellow Stone</h3>
+        <ul>
+            <li>Yellowstone is bigger than two U.S. states.</li>
+            <li>A veteran of the Lewis and Clark expedition may have been the first American to
+                see Yellowstone.
+            </li>
+            <li>One of Yellowstone’s earliest explorers was stranded there for 37 days.</li>
+            <li>The park sits atop the largest supervolcano in North America.</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Big Bend National Park</h3>
+        <ul>
+            <li>About 75 million years ago, a 40-mile-wide trough sank along fault lines which
+                resulted in the Santa Elena Canyon cliffs and the Sierra del Carmen.
+            </li>
+            <li>Langford Hot Springs near the park's Rio Grande was formed by volcanic activity
+                is about 105 degrees Fahrenheit.
+            </li>
+            <li>The Chisos Mountains were formed nearly 35 millions years ago after volcanic
+                activity spewed layers of ash and molten rock squeezed up through the ground.
+            </li>
+            <li>The park's Castolon Historic District once housed a U.S. Army camp. There are
+                still adobe buildings and artifacts from that time.
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h3>Badlands National Park</h3>
+        <ul>
+            <li>The Black Hills aren’t black.</li>
+            <li>There’s both a national park and a national monument underground.</li>
+            <li>The Badlands have their own road trip.</li>
+            <li>Mount Rushmore isn’t the only name carved in stone.</li>
+        </ul>
+    </li>
+</ul>
+<div class="container">
+    <div class="images-container" id="photo-frame-1">
+        <div class="images" id="photo-1"></div>
+    </div>
+    <div class="images-container" id="photo-frame-2">
+        <div class="images" id="photo-2"></div>
+    </div>
+    <div class="images-container" id="photo-frame-3">
+        <div class="images" id="photo-3"></div>
+    </div>
+</div>
 
-
-
+<button id="swapper">SWAP!</button>
 
 <script src="js/jquery.js"></script>
 <script>
-	$("#hide").on("click",function () {
+	$("#hide").on("click", function () {
+		$("dd").toggleClass("invisible");
+	});
 
-	$("dd").toggleClass("invisible");
-    });
+	$("#facts").on("click", function () {
+		$("li").css("background-color", "yellow")
+	});
+
+	$("h3").on("click", function () {
+		$(this).next().children().first().css("background-color", "blue")
+	});
+
+
+	/*
+    * Create 3 divs that each look like a picture Frame; each one should have a unique background
+    * image and a button underneath that swaps the image from the frame. Use Traversing functions
+    * of jQuery to accomplish this
+    * The rules are the following:
+    * The left frame swaps to the right and takes the image from the frame in the center.The center
+    * frame swaps randomly to either the left or right.The right frame swaps to the left and takes
+    * the image from the frame in the center.
+    * */
+
+	// photoframe id's photo-frame-x; image id's photo-x
+	var photoFrame1 = $("#photo-frame-1");
+	var photoFrame2 = $("#photo-frame-2");
+	var photoFrame3 = $("#photo-frame-3");
+	var pic1 = $("#photo-1");
+	var pic2 = $("#photo-2");
+	var pic3 = $("#photo-3");
+
+	function photoSwapper() {
+
+		var rando = Math.floor(Math.random() * 3);
+
+
+		return "done";
+
+	}
 
 </script>
 </body>
-</html>
