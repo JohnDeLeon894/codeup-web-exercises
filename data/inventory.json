@@ -1,0 +1,70 @@
+[
+    {
+        "title": "Hammer",
+        "quantity": 25,
+        "categories": [
+            "tool",
+            "hand-tool"
+        ],
+        "price": 20
+    }, {
+        "title": "Drill",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 100
+    }, {
+        "title": "Mower",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "gas",
+            "outdoor"
+        ],
+        "price": 200
+    }, {
+        "title": "Screwdrivers",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 10
+    }, {
+    "title": "Table Saw",
+    "quantity": 7,
+    "categories": [
+        "tool",
+        "powered"
+    ],
+    "price": 250
+}, {
+    "title": "Router",
+    "quantity": 5,
+    "categories": [
+        "tool",
+        "powered"
+    ],
+    "price": 375
+}, {
+    "title": "Dremmel kit",
+    "quantity": 12,
+    "categories": [
+        "tool",
+        "powered",
+        "accessories"
+    ],
+    "price": 125
+}, {
+    "title": "Ajax Store Trucker hat",
+    "quantity": 97,
+    "categories": [
+        "accessories",
+        "clothing",
+        "cool stuff"
+    ],
+    "price": 25
+}
+]
+
