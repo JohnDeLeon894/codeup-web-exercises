@@ -7,19 +7,48 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Mate"
+          rel="stylesheet">
+
+    <!--font-family: 'Fredericka the Great', cursive;
+    font-family: 'Mate', serif;-->
+
+    <style>
+        * {
+        background-color: black;
+            color: darkred;
+            font-family: 'Mate', serif;
+        }
+        body {
+            background-color:black ;
+        }
+        h1, h2, h3, h4, h5{
+            font-family: 'Fredericka the Great', cursive;
+            font-size: 8rem;
+            background-color: rgba(0,0,0,0);
+        }
+        .circ_logo{
+            background-color: #222;
+        }
+        p{
+            background-color: rgba(0,0,0,0);
+        }
+
+    </style>
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-light sticky-top border border-dark">
-    <a class="navbar-brand" href="#"> <div class="border border-primary rounded-circle">
-
+<nav class="navbar sticky-top border border-dark">
+    <div class="border border-primary rounded-circle circ_logo">
+    <a class="navbar-brand" href="#">
      <h1 class="text-center">My
         Tool Store</h1>
+        <p class="float-right">The tools to get'it done</p>
     </div>
     </a>
 </nav>
 <div class="container">
-    <table id="products " class="border border-dark col">
+    <table id="products " class="border border-dark col my-5">
         <thead class="border border-dark">
         <tr>
             <th>Title</th>

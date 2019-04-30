@@ -65,6 +65,23 @@
         "cool stuff"
     ],
     "price": 25
+},{
+    "title": "Plastic bags",
+    "quantity": 24,
+    "categories": [
+
+        "cleanup",
+        "trash-bags"
+    ],
+    "price": 8
+},{
+    "title": "Shovel",
+    "quantity": 3,
+    "categories": [
+        "burying",
+        "tool"
+    ],
+    "price": 8
 }
 ]
 
