@@ -6,8 +6,45 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ajax Blog</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Mate"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/ajax_store.css">
 </head>
 <body>
+<nav class="navbar sticky-top border border-dark">
+    <div class="border border-primary rounded-circle circ_logo">
+        <a class="navbar-brand" href="#">
+            <h1 class="text-center">My
+                Tool Store</h1>
+            <p class="float-right">The tools to get'it done</p>
+    </div>
+    </a>
+</nav>
+<div id="post"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $.ajax("data/blog.json").done(function (data) {
+	    data.forEach(function(obj, indx, array){
+	    	$("#post").append(
+	    		"<div class='container border border-dark'><h2>" +
+                obj.title +
+                "</h2><p class='float-right'><small>"+
+                obj.date + "</small><hr></p><p>" +
+                obj.content + "</p></div?"
+            )
+        })
+    });
+</script>
 </body>
 </html>

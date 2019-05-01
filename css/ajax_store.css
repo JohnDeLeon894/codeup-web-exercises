@@ -1,0 +1,22 @@
+* {
+    background-color: black;
+    color: darkred;
+    font-family: 'Mate', serif;
+}
+body {
+    background-color:black ;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Fredericka the Great', cursive;
+    background-color: rgba(0,0,0,0);
+}
+h1{
+    font-size: 8rem;
+}
+.circ_logo{
+    background-color: #222;
+}
+p{
+    background-color: rgba(0,0,0,0);
+}
+

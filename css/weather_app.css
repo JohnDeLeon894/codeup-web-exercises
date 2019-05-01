@@ -1,0 +1,11 @@
+html{
+    background-color: black;
+}
+
+.head_container{
+    background-color: #666666;
+}
+.weather_box {
+    height: 200px;
+    background-color: #24292e;
+}
