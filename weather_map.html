@@ -8,20 +8,31 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/weather_app.css">
     <title>Document</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+
+
+    </style>
 </head>
 <body>
 <div class="twelve column head_container">
-    <div class="heading"><h1>Weather Guesser</h1></div>
+    <div class="heading">
+        <h1>Weather Guesser</h1>
+        <div class="quote">It may rain, it may not.</div>
+    </div>
     <div class="four columns u-cf">Today's guess</div>
-    <div class="four columns u-cf weather_box"></div>
+    <div class="four columns u-cf weather_box" id="box_0"></div>
     <div class="four columns u-cf">Tomorrow's guess</div>
-    <div class="four columns u-cf weather_box"></div>
+    <div class="four columns u-cf weather_box" id="box_1"></div>
     <div class="four columns u-cf">The Next Day's guess</div>
-    <div class="four columns u-cf weather_box"></div>
+    <div class="four columns u-cf weather_box" id="box_2"></div>
 
 
 </div>
 
+<div id='map' class="columns six"></div>
 
 
 <script
@@ -29,29 +40,19 @@
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
+<script src="js/weather.js"></script>
 <script>
-	//(function () {
 
+	// mapbox
 
-		"use strict";
-
-		var corsUrl = "https://cors-anywhere.herokuapp.com/"
-		var darkSkyUrl = "https://api.darksky.net/forecast/";
-		var darkSkyApi = darkSkyKey;
-		var lat = 29.4241;
-		var lgn = -98.4936;
-
-
-		$.get(corsUrl + darkSkyUrl + darkSkyApi + "/" + lat + "," + lgn).done(function (data) {
-
-			// let time = new Date(data.currently.time * 1000);
-			// let summary = data.currently.summary;
-			 console.log(data);
-		});
-
-
-
-	//})();
+	mapboxgl.accessToken = mapboxKey;
+	var map = new mapboxgl.Map({
+		container: 'map', // container id
+		style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+		center: [lgn, lat], // starting position [lng, lat]
+		zoom: 9 // starting zoom
+	});
 </script>
+
 </body>
 </html>

@@ -2,34 +2,25 @@
 
 [
   {
-    "clear-day":
-  },
-  {
-    "clear-night":
-  },
-  {
-    "rain":
-  },
-  {
-   "snow":
-  },
-  {
-    "sleet":
-  },
-  {
-    "wind":
-  },
-  {
-    "fog":
-  },
-  {
-    "cloudy":
-  },
-  {
-    "partly-cloudy-day":
-  },
-  {
-    "partly-cloudy-night":
+    "clear-day":"icon/climacons-master/svg/Sun.svg",
+
+    "clear-night": "icon/climacons-master/svg/Moon.svg",
+
+    "rain": "icon/climacons-master/svg/Cloud-Rain.svg",
+
+   "snow": "icon/climacons-master/svg/Cloud-Snow.svg",
+
+    "sleet": "icon/climacons-master/svg/Cloud-Hail.svg",
+
+    "wind": "icon/climacons-master/svg/Wind.svg",
+
+    "fog": "icon/climacons-master/svg/Cloud-Fog.svg",
+
+    "cloudy": "icon/climacons-master/svg/Cloud.svg",
+
+    "partly-cloudy-day": "icon/climacons-master/svg/Cloud-Sun.svg",
+
+    "partly-cloudy-night": "icon/climacons-master/svg/Cloud-Moon.svg"
   }
 
 ]

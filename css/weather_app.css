@@ -1,11 +1,54 @@
 html{
     background-color: black;
+
+}
+
+body{
+    /*background-image: url("../img/sad-clouds.gif");*/
+    background-size: cover;
+    color: #efefef;
+    height: 100vh;
+    padding:0;
+    margin:0;
 }
 
 .head_container{
     background-color: #666666;
+    color: efefef;
+    background-image: url("../img/stormy.gif");
+    /*background-image: url("../img/sad-clouds.gif");*/
+    background-size: cover;
+    /*background-repeat: repeat;*/
+    height: 100%;
+    opacity: 1;
 }
 .weather_box {
     height: 200px;
-    background-color: #24292e;
+    background-color: #ccc;
+    color: #333;
+    padding: 10px;
+    opacity: .5;
+}
+
+#map {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:60%;
+    height: 83%;
+    right: 10px;
+    top: 105px;
+    background-color: #ccc;
+    opacity: .7;
+}
+.heading{
+    margin-left: 60px;
+    position: relative;
+
+}
+
+.quote{
+    position: absolute;
+    right: 10px;
+    top: 40px;
 }
