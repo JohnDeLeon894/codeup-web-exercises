@@ -144,4 +144,6 @@ $(".weather_box").on("click", function () {
 	})
 });
 
+
+
 //})();
