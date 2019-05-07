@@ -82,30 +82,36 @@ const nameArrToString = ()=> {
 	}
 	return nameArr.join(", ");
 };
-// console.log(nameArrToString());
+console.log(`Your instructors are: ${nameArrToString()}.`);
 
 //Use reduce to get the unique list of languages from the list of users.
+var langs = {};
 
 const langList = ()=> {
-	const langs = {};
+
 	let codeString= '';
 	users.reduce((langCount, usr) =>{
 		let strLang = usr.languages;
 		//console.log(strLang);
 		for (let str of strLang){
-			console.log(str);
+			//console.log(str);
 			//(typeof langCount[str] === "string") ? langCount[str]+=1 :  langCount[str]= 1;
-			codeString += `, ${str}`;
+			if (typeof langs[str] === "undefined"){
+				langs[str] = 1;
+				console.log(langs);
+			}else {
+				langs[str] +=1;
+			}
 
 		}
-		console.log(codeString);
-		console.log(langCount);
-	}, '');
+		//console.log(codeString);
+		console.log(` this is langs: ${langs}. this is usr: ${usr}.`);
+	}, {});
 
 	return langs;
 };
 
-console.log(langList());
+//console.log(langList());
 
 function countWords(sentence) {
 	const words = sentence.split(' '); // transform a sentence into an array of words
@@ -123,5 +129,7 @@ function countWords(sentence) {
 }
 
 //console.log(countWords('Mary had a little lamb little lamb little lamb'));
+
+
 
 //});
